@@ -1,0 +1,1 @@
+{"numberOfConfirm":5,"percentIgnoreConfirm":90,"maxOfProfile":100,"confirmDay":26,"confirmWait":300000.0,"numberOfReload":29,"isLimitBat":false,"maxLimitBat":0,"secondTabUrl":"https://koinly.io/fr","settingId":33,"settingName":"BAT rút","settingNote":"chay bat rut","settingType":"brave_ads","fromDay":0,"toDay":0,"isHide":false}

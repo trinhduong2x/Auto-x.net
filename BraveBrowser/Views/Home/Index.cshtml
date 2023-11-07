@@ -1,0 +1,51 @@
+﻿@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+Welcome to you !!!
+<br />
+<br />
+@ViewBag.NetworkInfo
+
+@*<h2>2 phút hoàn thành nhiệm vụ KYC để nhận mã thẻ</h2>
+	<div class="row">
+		<div id="content" class="col-sm-6">
+			<h2>Bắt đầu gửi thông tin</h2>
+			@using (Ajax.BeginForm("SubmitInformation", "Home", new { Area = "Admin" }, new AjaxOptions() { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "content" }, new { @id = "form" }))
+			{
+		<div class="form-group">
+			<label>Số Chứng Minh Thư/Số thẻ căn cước</label>
+			@Html.EditorFor(Model => Model.Email, new { htmlAttributes = new { @placeholder = Resources.Resource.LoginPopup_Form_EmailText, @title = "", @class = "inputNormal", @autocomplete = "false" } })
+			@Html.ValidationMessageFor(Model => Model.Email, "", new { @class = "text-danger" })
+
+			<input type="text" class="form-control" placeholder="Ví dụ: 121 890 098">
+			<small class="form-text text-muted">Lưu ý mỗi chứng minh/thẻ căn cước chỉ tạo được một lần.</small>
+		</div>
+				<div class="form-group">
+					<label>Họ Và Tên</label>
+					<input type="text" class="form-control" placeholder="Ví dụ: Nguyễn Văn Toàn">
+					<small class="form-text text-muted">Họ Và Tên trên chứng minh thư/thẻ căn cước.</small>
+				</div>
+				<div class="form-group">
+					<label>Ngày Sinh</label>
+					<input type="text" class="form-control" placeholder="Ngày / Tháng / Năm">
+					<small class="form-text text-muted">Ngày sinh trên chứng minh thư/thẻ căn cước.</small>
+				</div>
+				<div class="form-group">
+					<label>Địa Chỉ</label>
+					<input type="text" class="form-control" placeholder="Ví dụ: Xã Bình Định, Huyện Thăng Bình, Quảng Nam">
+					<small class="form-text text-muted">Nhập đúng địa chỉ trên chứng minh thư/thẻ căn cước.</small>
+				</div>
+				<div class="form-group">
+					<label>Số điện thoại</label>
+					<input type="text" class="form-control" placeholder="Ví dụ: 0988 889 889">
+					<small class="form-text text-muted">Nhập đúng số điện thoại, chúng tôi sẽ gửi mã thẻ về số điện thoại.</small>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			}
+		</div>
+		<div class="col-sm-6">
+			<h2>Video hướng dẫn</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Vij2ehcCtjQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>*@

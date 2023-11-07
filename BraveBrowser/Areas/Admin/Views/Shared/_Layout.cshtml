@@ -1,0 +1,134 @@
+﻿@using BraveBrowser.Helpers
+@{
+	string actionName = HttpContext.Current.Request.RequestContext.RouteData.Values["action"].ToString();
+	string controllerName = HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://brave.com/static-assets/images/brave-favicon.png">
+	<title>Brave Ads</title>
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/js")
+	<script src="~/Scripts/common.js"></script>
+	<!-- Toastr css -->
+	<link href="~/Content/assets/toastr/toastr.css" rel="stylesheet" type="text/css" />
+	<script src="~/Content/assets/toastr/toastr.min.js" type="text/javascript"></script>
+	<!-- jquery loading -->
+	<script src="~/Content/assets/jquery-loading/dist/jquery.loading.min.js"></script>
+	<!-- Footable -->
+	<link href="~/Content/assets/footable-bootstrap/css/footable.core.min.css" rel="stylesheet" />
+	<!-- Bootstrap DatePicker -->
+	<link href="~/Content/assets/bootstrap-datepicker/bootstrap-datepicker.css" rel="stylesheet" />
+	<script src="~/Content/assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+		<div class="container-fluid">
+			@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item @Html.IsActive("Index", "Tracking")">
+						@Html.ActionLink("Tracking vmware", "Index", "Tracking", null, new { @class = "nav-link" + (controllerName == "Tracking" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "AdsRun")">
+						@Html.ActionLink("Live vmware", "Index", "AdsRun", null, new { @class = "nav-link" + (controllerName == "AdsRun" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "WithDrawed")">
+						@Html.ActionLink("BAT status", "Index", "WithDrawed", null, new { @class = "nav-link" + (controllerName == "WithDrawed" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "AdsTools")">
+						@Html.ActionLink("Update tools", "Index", "AdsTools", null, new { @class = "nav-link" + (controllerName == "AdsTools" ? " active" : "") })
+					</li>
+					@*<li class="nav-item @Html.IsActive("Index", "BraveLink")">
+			@Html.ActionLink("Links", "Index", "BraveLink", null, new { @class = "nav-link" + (controllerName == "BraveLink" ? " active" : "") })
+		</li>*@
+					<li class="nav-divider">|</li>
+					<li class="nav-item @Html.IsActive("Index", "Group")">
+						@Html.ActionLink("Group vmware", "Index", "Group", null, new { @class = "nav-link" + (controllerName == "Group" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "Vmware")">
+						@Html.ActionLink("Vmware", "Index", "Vmware", null, new { @class = "nav-link" + (controllerName == "Vmware" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "BraveSetting")">
+						@Html.ActionLink("Brave config", "Index", "BraveSetting", null, new { @class = "nav-link" + (controllerName == "BraveSetting" ? " active" : "") })
+					</li>
+					<li class="nav-divider">|</li>
+					<li class="nav-item @Html.IsActive("Index", "ShortlinkAccount")">
+						@Html.ActionLink("Shortlink acc", "Index", "ShortlinkAccount", null, new { @class = "nav-link" + (controllerName == "ShortlinkAccount" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "ShortlinkService")">
+						@Html.ActionLink("Service", "Index", "ShortlinkService", null, new { @class = "nav-link" + (controllerName == "ShortlinkService" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "ShortlinkGoogleKeyword")">
+						@Html.ActionLink("Google keyword", "Index", "ShortlinkGoogleKeyword", null, new { @class = "nav-link" + (controllerName == "ShortlinkGoogleKeyword" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "ShortlinkIpDaily")">
+						@Html.ActionLink("IP daily", "Index", "ShortlinkIpDaily", null, new { @class = "nav-link" + (controllerName == "ShortlinkIpDaily" ? " active" : "") })
+					</li>
+					@*<li class="nav-divider">|</li>
+		<li class="nav-item @Html.IsActive("Index", "BraveTip")">
+			@Html.ActionLink("Tip account", "Index", "BraveTip", null, new { @class = "nav-link" + (controllerName == "BraveTip" ? " active" : "") })
+		</li>
+		<li class="nav-item @Html.IsActive("Index", "BraveWallet")">
+			@Html.ActionLink("Wallet", "Index", "BraveWallet", null, new { @class = "nav-link" + (controllerName == "BraveWallet" ? " active" : "") })
+		</li>
+		<li class="nav-item @Html.IsActive("Index", "TipSetting")">
+			@Html.ActionLink("Tip config", "Index", "TipSetting", null, new { @class = "nav-link" + (controllerName == "TipSetting" ? " active" : "") })
+		</li>
+		<li class="nav-item @Html.IsActive("Index", "TipLocation")">
+			@Html.ActionLink("Location", "Index", "TipLocation", null, new { @class = "nav-link" + (controllerName == "TipLocation" ? " active" : "") })
+		</li>*@
+					<li class="nav-divider">|</li>
+					<li class="nav-item @Html.IsActive("Index", "NetworkAccount")">
+						@Html.ActionLink("Mmo account", "Index", "NetworkAccount", null, new { @class = "nav-link" + (controllerName == "NetworkAccount" ? " active" : "") })
+					</li>
+					@*<li class="nav-divider">|</li>
+		<li class="nav-item @Html.IsActive("Index", "HiveAccount")">
+			@Html.ActionLink("Hive account", "Index", "HiveAccount", null, new { @class = "nav-link" + (controllerName == "HiveAccount" ? " active" : "") })
+		</li>
+		<li class="nav-divider">|</li>
+		<li class="nav-item @Html.IsActive("Index", "MindsAccount")">
+			@Html.ActionLink("Minds account", "Index", "MindsAccount", null, new { @class = "nav-link" + (controllerName == "MindsAccount" ? " active" : "") })
+		</li>
+		<li class="nav-item @Html.IsActive("Index", "Setting")">
+			@Html.ActionLink("Minds config", "Index", "MindsSetting", null, new { @class = "nav-link" + (controllerName == "MindsSetting" ? " active" : "") })
+		</li>
+		<li class="nav-divider">|</li>
+		<li class="nav-item @Html.IsActive("Index", "UpholdAds")">
+			@Html.ActionLink("Upholds", "Index", "UpholdAds", null, new { @class = "nav-link" + (controllerName == "UpholdAds" ? " active" : "") })
+		</li>*@
+					<li class="nav-item @Html.IsActive("Index", "Mobula")">
+						@Html.ActionLink("Mobula", "Index", "Mobula", null, new { @class = "nav-link" + (controllerName == "Mobula" ? " active" : "") })
+					</li>
+					<li class="nav-item @Html.IsActive("Index", "BraveUser")">
+						@Html.ActionLink("User", "Index", "BraveUser", null, new { @class = "nav-link" + (controllerName == "BraveUser" ? " active" : "") })
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="~/Logs" target="_blank">Log</a>
+					</li>
+				</ul>
+				<div class="form-inline my-2 my-lg-0">
+					xin chào&nbsp;<b>@ViewBag.Username</b>!&nbsp;
+					@Html.ActionLink("logout", "Logout", "Login", null, new { @class = "nav-link" })
+				</div>
+			</div>
+		</div>
+	</nav>
+	<main class="container-fluid">
+		@RenderBody()
+	</main>
+	<!-- Footable -->
+	<script src="~/Content/assets/footable-bootstrap/js/footable.all.min.js"></script>
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,12 @@
+20:26:14 251 [INFO ] - //////////////////////// AddShortlinkUrl() ////////////////////////
+20:26:14 252 [ERROR] - Error: Method error ShortlinkAddUrl:  : System.InvalidOperationException: Mapping and metadata information could not be found for EntityType 'BraveBrowser.ApiModels.Shortlink.shortlink_account_url_request'.
+   at System.Data.Entity.Core.Objects.ObjectContext.GetTypeUsage(Type entityCLRType)
+   at System.Data.Entity.Core.Objects.ObjectContext.ValidateEntitySet(EntitySet entitySet, Type entityType)
+   at System.Data.Entity.Core.Objects.ObjectContext.VerifyRootForAdd(Boolean doAttach, String entitySetName, IEntityWrapper wrappedEntity, EntityEntry existingEntry, EntitySet& entitySet, Boolean& isNoOperation)
+   at System.Data.Entity.Core.Objects.ObjectContext.AddObject(String entitySetName, Object entity)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.ActOnSet(Action action, EntityState newState, Object entity, String methodName)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Add(Object entity)
+   at System.Data.Entity.DbSet`1.Add(TEntity entity)
+   at BraveBrowser.Apis.ShortLinkController.AddShortlinkUrl(shortlink_account_url_request model) in D:\TFS\Auto-tools.net\C_Website\A_Source\BraveBrowser\Apis\ShortLinkController.cs:line 186
+20:26:14 253 [INFO ] - 
+
