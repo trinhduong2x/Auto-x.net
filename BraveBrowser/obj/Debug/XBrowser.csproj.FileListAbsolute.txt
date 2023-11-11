@@ -79,3 +79,15 @@ D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\obj\Debug\XBrowser.csproj.C
 D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\obj\Debug\XBrowser.csproj.CopyComplete
 D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\obj\Debug\BraveBrowser.dll
 D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\obj\Debug\BraveBrowser.pdb
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\FluentValidation.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\System.Threading.Tasks.Extensions.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\FluentValidation.xml
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\System.Threading.Tasks.Extensions.xml
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Extensions.DependencyInjection.xml

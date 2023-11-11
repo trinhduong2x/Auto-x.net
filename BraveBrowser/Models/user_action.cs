@@ -30,5 +30,9 @@ namespace BraveBrowser.Models
         public DateTime? created_date { get; set; }
 
         public bool is_active { get; set; }
+
+        public int action_daily_from { get; set; }
+
+        public int action_daily_to { get; set; }
     }
 }

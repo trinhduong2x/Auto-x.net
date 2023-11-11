@@ -5,13 +5,13 @@ namespace BraveBrowser.Models
 {
     public partial class DataContext : DbContext
     {
-    //	public brave_tip_url GetRandomTipUrls()
-    //{
-    //	var urls = Database.SqlQuery<brave_tip_url>("exec stp_GetRandomTipUrls", new object[] { }).ToList();
-    //	return (urls != null && urls.Count > 0) ? urls.First() : null;
-    //}
+        public int GetRandomTipUrls()
+        {
+            var urls = Database.SqlQuery<int>("exec sp_InsertDataUser @", new object[] { }).ToList();
+            return (urls != null && urls.Count > 0) ? urls.First() : 0;
+        }
 
-    public user GetRandomTipUrlsV2()
+        public user GetRandomTipUrlsV2()
     {
         var urls = Database.SqlQuery<user>("exec stp_AdminGetTipList", new object[] { }).ToList();
         return (urls != null && urls.Count > 0) ? urls.First() : null;

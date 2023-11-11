@@ -38,5 +38,6 @@ namespace BraveBrowser.Models
         public bool is_premium { get; set; }
 
         public bool is_delete { get; set; }
+
     }
 }
