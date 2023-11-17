@@ -91,3 +91,6 @@ D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\System.Runtime.Compiler
 D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\System.Threading.Tasks.Extensions.xml
 D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Extensions.DependencyInjection.dll
 D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\MoreLinq.dll
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\MoreLinq.pdb
+D:\New folder (2)\Auto-x.net\Auto-x.net\BraveBrowser\bin\MoreLinq.xml

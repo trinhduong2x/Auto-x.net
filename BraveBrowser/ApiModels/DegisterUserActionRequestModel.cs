@@ -6,7 +6,7 @@ using System.Web;
 
 namespace BraveBrowser.ApiModels
 {
-    public class DegisterUserActionModel
+    public class DegisterUserActionRequestModel
     {
         public string UserName { get; set; }
 
@@ -18,9 +18,9 @@ namespace BraveBrowser.ApiModels
 
     }
 
-    public class DegisterUserActionModelValidation : AbstractValidator<DegisterUserActionModel>
+    public class DegisterUserActionModelRequestValidation : AbstractValidator<DegisterUserActionRequestModel>
     {
-        public DegisterUserActionModelValidation()
+        public DegisterUserActionModelRequestValidation()
         {
             this.RuleFor(x => x.UserName).NotNull().NotEmpty();
             this.RuleFor(x => x.Ip).NotNull().NotEmpty();
